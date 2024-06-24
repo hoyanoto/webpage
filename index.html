@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Animations with Sound</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Black+Ops+One&display=swap');
+        
+        body {
+            font-family: 'Black Ops One', sans-serif;
+            background: url('https://images.unsplash.com/photo-1582563253122-694cbab477c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg5MDR8MHwxfGFsbHwxfHx8fHx8fHx8fHwxNjEwNTk4NDM1&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        .container {
+            text-align: center;
+        }
+
+        .title {
+            font-family: 'Bangers', cursive;
+            font-size: 4em;
+            margin-bottom: 20px;
+            animation: zoomIn 2s;
+            color: #ff0066;
+            text-shadow: 0 0 10px rgba(255, 0, 102, 0.8), 0 0 20px rgba(255, 0, 102, 0.8), 0 0 30px rgba(255, 0, 102, 0.8), 0 0 40px rgba(255, 0, 102, 0.8);
+        }
+        
+        .subtitle {
+            font-size: 3em;
+            animation: zoomIn 2s 1s;
+            color: #00ffcc;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.8), 0 0 20px rgba(0, 255, 204, 0.8), 0 0 30px rgba(0, 255, 204, 0.8), 0 0 40px rgba(0, 255, 204, 0.8);
+        }
+
+        .animated-text {
+            display: inline-block;
+            animation: neon 2s infinite;
+            font-size: 2.5em;
+            color: #ffcc00;
+            text-shadow: 0 0 5px rgba(255, 204, 0, 0.8), 0 0 10px rgba(255, 204, 0, 0.8), 0 0 15px rgba(255, 204, 0, 0.8), 0 0 20px rgba(255, 204, 0, 0.8);
+        }
+
+        @keyframes neon {
+            0%, 100% {
+                text-shadow: 0 0 5px rgba(255, 204, 0, 0.8), 0 0 10px rgba(255, 204, 0, 0.8), 0 0 15px rgba(255, 204, 0, 0.8), 0 0 20px rgba(255, 204, 0, 0.8);
+                color: #ffcc00;
+            }
+            50% {
+                text-shadow: 0 0 5px rgba(255, 0, 102, 0.8), 0 0 10px rgba(255, 0, 102, 0.8), 0 0 15px rgba(255, 0, 102, 0.8), 0 0 20px rgba(255, 0, 102, 0.8);
+                color: #ff0066;
+            }
+        }
+        
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale3d(0.3, 0.3, 0.3);
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        
+        .additional-text {
+            font-size: 1.5em;
+            margin-top: 20px;
+            animation: fadeInUp 2s 2s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <audio id="myAudio">
+        <source src="https://www.soundjay.com/button/beep-07.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="container">
+        <div class="title animate__animated animate__bounceIn">Hide your girl</div>
+        <div class="subtitle animate__animated animate__bounceIn">Bengali ফেনাম is</div>
+        <div class="subtitle animate__animated animate__pulse animate__infinite animated-text">Rizz King</div>
+        <div class="additional-text animate__animated animate__fadeInUp">You are gayy</div>
+    </div>
+
+    <script>
+        // Play sound effect on page load
+        window.onload = function() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        };
+    </script>
+</body>
+</html>
